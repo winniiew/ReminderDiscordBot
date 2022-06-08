@@ -12,7 +12,6 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from keep_alive import keep_alive
 sched = AsyncIOScheduler()
 sched.start()
-
 bot_token = "TOKEN"
 bot = commands.Bot(command_prefix = "/")
 
@@ -132,8 +131,10 @@ async def remindme(ctx, time, *, msg):
 
 @bot.event
 async def on_ready():
-	print("Logged in!\n----------\n")
-	print(f"Connected to {len(bot.guilds)} guilds...  {', '.join([e.name for e in bot.guilds])}")
+  await     bot.change_presence(activity=discord.Game('Reminding 🕓'))
+  print("Logged in!\n----------\n")
+  print(f"Connected to {len(bot.guilds)} guilds...  {', '.join([e.name for e in bot.guilds])}")
+
   
 keep_alive()
 bot.run(bot_token)
