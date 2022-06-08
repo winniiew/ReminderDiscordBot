@@ -40,9 +40,9 @@ Run the following in the bash shell:
 Change the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) by following the format below
 
 ```python
-tzinfos = {"COUNTRY_CODE": tz.gettz("TZ_NAME")}
+tzinfos = {"<COUNTRY_CODE>": tz.gettz("<TZ_NAME>")}
 
-dt = parser.parse(f"{dt} COUNTRY_CODE", tzinfos=tzinfos)
+dt = parser.parse(f"{dt} <COUNTRY_CODE>", tzinfos=tzinfos)
 ```
   
 `<COUNTRY_CODE>` with the desired country code 
