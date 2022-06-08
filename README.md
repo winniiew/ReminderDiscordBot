@@ -25,7 +25,7 @@ Run the following in the bash shell:
 
 `pip install pytz`
 
-- Then run `main.py`, this should generate a URL `https://reminderbot.winniiew.repl.co/` that can then be used in https://uptimerobot.com/ to host the Discord bot.
+- Then run `main.py`, this should generate a URL `https://reminderbot.winniiew.repl.co/` that can then be used in [UptimeRobot](https://uptimerobot.com/) to host the Discord bot.
 
 ### Uptime Robot
 1. Click `+ Add New Monitor`
