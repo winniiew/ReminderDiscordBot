@@ -12,7 +12,8 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from keep_alive import keep_alive
 sched = AsyncIOScheduler()
 sched.start()
-bot_token = "OTgzODUyMzYyMjY5NjA5OTg0.G1Hy4j.zqGLjRm0ZZ4ba-8sHcHDIQthXyG3G_90AMIvZY"
+
+bot_token = "TOKEN"
 bot = commands.Bot(command_prefix = "/")
 
 def parse_datetime(dt):
