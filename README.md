@@ -5,7 +5,7 @@ This is a custom Reminder Discord bot
 
 - Create a [Bot account](https://discordpy.readthedocs.io/en/stable/discord.html) and invite the Bot to a Discord server
 
-- Add `msin.py` and `keep_alive.py` to a new repository on [Replit](https://replit.com/)
+- Add `main.py` and `keep_alive.py` to a new repository on [Replit](https://replit.com/)
 
 - Replace `TOKEN` with the Discord Bot token
 
