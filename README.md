@@ -65,6 +65,22 @@ https://discord.com/api/oauth2/authorize?client_id=983852362269609984&permission
 `/remindme 15m Laundry`
 
 `/remindme 16:30:00 Feed the dog`
+  
+ ### Units Supported
+  
+  `s` `second` `seconds` 
+ 
+  `m` `minute` `minutes`
+  
+  `h` `hour` `hours`
+  
+  `d` `day` `days`
+  
+  `w` `week` `weeks`
+  
+  `mo` `month` `months`
+  
+  `y` `year` `years`
 
 
 
