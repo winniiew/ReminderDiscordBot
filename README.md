@@ -1,12 +1,17 @@
+# Reminder Bot for Discord 🕑
 This is a custom Reminder Discord bot
 
-Possible commands:
+## Install Directly on a local computer
 
-`/remindme 15m Laundry`
+- Create a [Bot account](https://discordpy.readthedocs.io/en/stable/discord.html) and invite the Bot to a Discord server
 
-`/remindme 16:30:00 Feed the dog`
+- Add `msin.py` and `keep_alive.py` to a new repository on [Replit](https://replit.com/)
 
-Install libraries in bash shell:
+- Replace `TOKEN` with the Discord Bot token
+
+## Replit
+
+Run the following in the bash shell:
 
 `pip install discord`
 
@@ -20,22 +25,47 @@ Install libraries in bash shell:
 
 `pip install pytz`
 
-Change the timezone by altering these lines. List of timezones can be found here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+- Then run `main.py`, this should generate a URL `https://reminderbot.winniiew.repl.co/` that can then be used in https://uptimerobot.com/ to host the Discord bot.
 
-`tzinfos = {"US": tz.gettz("America/Los_Angeles")}`
-
-`dt = parser.parse(f"{dt} US", tzinfos=tzinfos)`
-
-Then run `main.py`, this should generate a URL `https://reminderbot.winniiew.repl.co/` that can then be used in https://uptimerobot.com/ to host the Discord bot.
-
-Uptime Robot:
+### Uptime Robot
 1. Click `+ Add New Monitor`
 2. Select `HTTP(s)` under `Monitor Types`
 3. Paste the generated URL
 4. Change the monitoring interval to 5 minutes
 
-<img width="441" alt="reminder2" src="https://user-images.githubusercontent.com/86391366/172505916-782aff26-2fb2-4c0a-abef-a5dd9e0767e1.PNG">
+<p align="center">
+<img width="500" alt="reminder2" src="https://user-images.githubusercontent.com/86391366/172505916-782aff26-2fb2-4c0a-abef-a5dd9e0767e1.PNG">
+<p>
 
-Result:
+Change the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) by following the format below
 
-<img width="250" alt="remind" src="https://user-images.githubusercontent.com/86391366/172505493-59d4c369-7a60-4e29-933e-da677144e6d0.PNG">
+```python
+tzinfos = {"COUNTRY_CODE": tz.gettz("TZ_NAME")}
+
+dt = parser.parse(f"{dt} COUNTRY_CODE", tzinfos=tzinfos)
+```
+  
+`<COUNTRY_CODE>` with the desired country code 
+ 
+`<TZ_NAME>` with the timezone database name matching the country code
+  
+  
+**Example**
+```python
+tzinfos = {"US": tz.gettz("America/Los_Angeles")}
+
+dt = parser.parse(f"{dt} US", tzinfos=tzinfos)
+```
+  
+## Invite Bot to join server
+https://discord.com/api/oauth2/authorize?client_id=983852362269609984&permissions=534723897408&scope=bot
+
+## Commands
+
+`/remindme 15m Laundry`
+
+`/remindme 16:30:00 Feed the dog`
+
+
+
+
